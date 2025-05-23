@@ -38,9 +38,44 @@ namespace ComercialTDSDesk
         {
             FrmLogin frmLogin = new();
             frmLogin.btnCancelar.Text = "&Voltar";
-            frmLogin.ShowDialog();           
+            frmLogin.ShowDialog();
             tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
 
+        }
+
+        private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AssociaPanel(Form form)
+        {
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.MaximizeBox = true;
+            form.AutoSize = true;
+            form.Size = AssociaPainel.Size;
+            AssociaPainel.Controls.Clear();
+            AssociaPainel.Controls.Add(form);
+            form.Show();
+            form.Visible = true;
+
+        }
+
+        private void nveisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmNivel());
+        }
+
+        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmProduto());
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmProdutoListar());
         }
     }
 }

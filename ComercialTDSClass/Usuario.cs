@@ -77,7 +77,7 @@ namespace ComercialTDSClass
             cmd.Parameters.AddWithValue("spid",Id);
             cmd.Parameters.AddWithValue("spnome",Nome);
             cmd.Parameters.AddWithValue("spsenha",Senha);
-            cmd.Parameters.AddWithValue("spnivel",Nivel.Id);
+            cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
         // usando if ternário, sem fechar conexão
             return cmd.ExecuteNonQuery() > 0 ? true : false;
 
