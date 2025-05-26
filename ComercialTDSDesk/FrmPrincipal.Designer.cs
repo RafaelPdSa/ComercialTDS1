@@ -405,5 +405,6 @@
         private ToolStripMenuItem consultarToolStripMenuItem2;
         private ToolStripMenuItem emitirNotaToolStripMenuItem;
         private Panel AssociaPainel;
+        private TextBox txtrIdProd;
     }
 }
