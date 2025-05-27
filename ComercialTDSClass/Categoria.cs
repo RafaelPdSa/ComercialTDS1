@@ -50,7 +50,7 @@ namespace ComercialTDSClass
             Categoria categoria = new();
             // código do método
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"select * from niveis where id = {id}";
+            cmd.CommandText = $"select * from categorias where id = {id}";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {

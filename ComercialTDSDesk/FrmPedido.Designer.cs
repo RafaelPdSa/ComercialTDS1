@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             grbIndentificacao = new GroupBox();
             button1 = new Button();
             btnInserePedido = new Button();
@@ -54,13 +56,6 @@
             txtDescricao = new TextBox();
             btnAddItem = new Button();
             dgvItensPedido = new DataGridView();
-            clnSeq = new DataGridViewTextBoxColumn();
-            clnCodBar = new DataGridViewTextBoxColumn();
-            clnDescricao = new DataGridViewTextBoxColumn();
-            clnValorUnit = new DataGridViewTextBoxColumn();
-            clnQuantidade = new DataGridViewTextBoxColumn();
-            clnDescontoItem = new DataGridViewTextBoxColumn();
-            clnTotalItem = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
             txtIdPedido = new TextBox();
@@ -73,6 +68,13 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
+            clnSeq = new DataGridViewTextBoxColumn();
+            clnCodBar = new DataGridViewTextBoxColumn();
+            clnDescricao = new DataGridViewTextBoxColumn();
+            clnValorUnit = new DataGridViewTextBoxColumn();
+            clnQuantidade = new DataGridViewTextBoxColumn();
+            clnDescontoItem = new DataGridViewTextBoxColumn();
+            clnTotalItem = new DataGridViewTextBoxColumn();
             grbIndentificacao.SuspendLayout();
             grbItens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensPedido).BeginInit();
@@ -348,62 +350,6 @@
             dgvItensPedido.Size = new Size(620, 173);
             dgvItensPedido.TabIndex = 0;
             // 
-            // clnSeq
-            // 
-            clnSeq.Frozen = true;
-            clnSeq.HeaderText = "#SEQ";
-            clnSeq.Name = "clnSeq";
-            clnSeq.ReadOnly = true;
-            clnSeq.Width = 40;
-            // 
-            // clnCodBar
-            // 
-            clnCodBar.Frozen = true;
-            clnCodBar.HeaderText = "Cod Barras";
-            clnCodBar.Name = "clnCodBar";
-            clnCodBar.ReadOnly = true;
-            clnCodBar.Width = 90;
-            // 
-            // clnDescricao
-            // 
-            clnDescricao.Frozen = true;
-            clnDescricao.HeaderText = "Descrição";
-            clnDescricao.Name = "clnDescricao";
-            clnDescricao.ReadOnly = true;
-            clnDescricao.Width = 170;
-            // 
-            // clnValorUnit
-            // 
-            clnValorUnit.Frozen = true;
-            clnValorUnit.HeaderText = "Valor Unit";
-            clnValorUnit.Name = "clnValorUnit";
-            clnValorUnit.ReadOnly = true;
-            clnValorUnit.Width = 90;
-            // 
-            // clnQuantidade
-            // 
-            clnQuantidade.Frozen = true;
-            clnQuantidade.HeaderText = "Quant";
-            clnQuantidade.Name = "clnQuantidade";
-            clnQuantidade.ReadOnly = true;
-            clnQuantidade.Width = 70;
-            // 
-            // clnDescontoItem
-            // 
-            clnDescontoItem.Frozen = true;
-            clnDescontoItem.HeaderText = "Desconto";
-            clnDescontoItem.Name = "clnDescontoItem";
-            clnDescontoItem.ReadOnly = true;
-            clnDescontoItem.Width = 70;
-            // 
-            // clnTotalItem
-            // 
-            clnTotalItem.Frozen = true;
-            clnTotalItem.HeaderText = "Total";
-            clnTotalItem.Name = "clnTotalItem";
-            clnTotalItem.ReadOnly = true;
-            clnTotalItem.Width = 90;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -523,6 +469,68 @@
             label14.TabIndex = 9;
             label14.Text = "Total ";
             // 
+            // clnSeq
+            // 
+            clnSeq.Frozen = true;
+            clnSeq.HeaderText = "#SEQ";
+            clnSeq.Name = "clnSeq";
+            clnSeq.ReadOnly = true;
+            clnSeq.Width = 40;
+            // 
+            // clnCodBar
+            // 
+            clnCodBar.Frozen = true;
+            clnCodBar.HeaderText = "Cod Barras";
+            clnCodBar.Name = "clnCodBar";
+            clnCodBar.ReadOnly = true;
+            clnCodBar.Width = 90;
+            // 
+            // clnDescricao
+            // 
+            clnDescricao.Frozen = true;
+            clnDescricao.HeaderText = "Descrição";
+            clnDescricao.Name = "clnDescricao";
+            clnDescricao.ReadOnly = true;
+            clnDescricao.Width = 170;
+            // 
+            // clnValorUnit
+            // 
+            clnValorUnit.Frozen = true;
+            clnValorUnit.HeaderText = "Valor Unit";
+            clnValorUnit.Name = "clnValorUnit";
+            clnValorUnit.ReadOnly = true;
+            clnValorUnit.Width = 90;
+            // 
+            // clnQuantidade
+            // 
+            clnQuantidade.Frozen = true;
+            clnQuantidade.HeaderText = "Quant";
+            clnQuantidade.Name = "clnQuantidade";
+            clnQuantidade.ReadOnly = true;
+            clnQuantidade.Width = 70;
+            // 
+            // clnDescontoItem
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            clnDescontoItem.DefaultCellStyle = dataGridViewCellStyle1;
+            clnDescontoItem.Frozen = true;
+            clnDescontoItem.HeaderText = "Desconto";
+            clnDescontoItem.Name = "clnDescontoItem";
+            clnDescontoItem.ReadOnly = true;
+            clnDescontoItem.Width = 70;
+            // 
+            // clnTotalItem
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            clnTotalItem.DefaultCellStyle = dataGridViewCellStyle2;
+            clnTotalItem.Frozen = true;
+            clnTotalItem.HeaderText = "Total";
+            clnTotalItem.Name = "clnTotalItem";
+            clnTotalItem.ReadOnly = true;
+            clnTotalItem.Width = 90;
+            // 
             // FrmPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -589,6 +597,11 @@
         private Label label12;
         private Label label13;
         private Label label14;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Button button1;
+        private Label label4;
+        private TextBox txtIdProd;
         private DataGridViewTextBoxColumn clnSeq;
         private DataGridViewTextBoxColumn clnCodBar;
         private DataGridViewTextBoxColumn clnDescricao;
@@ -596,10 +609,5 @@
         private DataGridViewTextBoxColumn clnQuantidade;
         private DataGridViewTextBoxColumn clnDescontoItem;
         private DataGridViewTextBoxColumn clnTotalItem;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Button button1;
-        private Label label4;
-        private TextBox txtIdProd;
     }
 }

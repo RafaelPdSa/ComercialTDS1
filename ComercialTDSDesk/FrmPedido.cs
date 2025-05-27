@@ -163,7 +163,7 @@ namespace ComercialTDSDesk
             pedido.Status = "F";
             if (pedido.Atualizar())
             {
-                MessageBox.Show($"Pedido{pedido.Id} foi Fechado com sucesso. \n");
+                MessageBox.Show($"Pedido {pedido.Id} foi Fechado com sucesso. \n");
                 dgvItensPedido.Rows.Clear();
                 txtIdPedido.Clear();
                 txtIdPedido.Focus();

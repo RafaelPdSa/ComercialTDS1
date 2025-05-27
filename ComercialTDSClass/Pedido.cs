@@ -67,7 +67,7 @@ namespace ComercialTDSClass
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.CommandText = "sp_pedido_update";
-            cmd.Parameters.AddWithValue("sspid", Id);
+            cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spstatus", Status);
             cmd.Parameters.AddWithValue("spdesconto", Desconto);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
